@@ -1,0 +1,36 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "bdd" : "",
+    "client": "npm run start --prefix client",
+    "server-watch": "nodemon -r dotenv/config server.js",
+    "server": "nodemon -r dotenv/config server.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run bdd\" \"npm run server-watch\" \"npm run client\"",
+    "start": "concurrently --kill-others-on-fail \"npm run bdd\" \"npm run server\" \"npm run client\"",    
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Lahcene CHAKLALA",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-validator": "^5.3.1",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.8.0",
+    "mongoose-paginate-v2": "^1.3.6",
+    "nodemailer": "^6.4.2",
+    "nodemailer-express-handlebars": "^3.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.1",
+    "debug": "^4.1.1",
+    "dotenv-safe": "^8.2.0",
+    "faker": "^4.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.2"
+  }
+}
